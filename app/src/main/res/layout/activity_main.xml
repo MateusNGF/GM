@@ -84,7 +84,7 @@
                 <TextView
                     android:text="ALUNO"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -123,7 +123,7 @@
                 <TextView
                     android:text="NOTICIAS"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#FF525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
                 <TextView
                     android:text="EVENTOS"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#FF525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -204,7 +204,7 @@
                 <TextView
                     android:text="AVALIAÇÕES"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#FF525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -246,7 +246,7 @@
                 <TextView
                     android:text="DISCUSSÕES"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#FF525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -285,7 +285,7 @@
                 <TextView
                     android:text="CONTATO"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="#FF525759"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"

@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 5:
                             ShowToast(true,"CONTATO");
+                            break;
                         default:
                             ShowToast(false,null);
                             break;
