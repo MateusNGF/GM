@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#efefef">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -19,4 +21,69 @@
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"/>
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="C O N T A T O"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fadingEdgeLength="10dp"
+                android:text="ENVIE SUA DUVIDA, PERGUNTA, QUESTIONAMENTO, AVALIAÇÃO ENTRE OUTRAS, RESPONDEREMOS EM BREVE." />
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person"
+                android:hint="Nome Completo"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_email"
+                android:hint="E-mail Ativo"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorAccent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_texto"
+                android:hint="Escreva Sua Mensagem"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/layout_button"
+                android:gravity="center"
+                android:text="ENVIAR MENSAGEM"
+                android:maxLength="500"
+                android:maxLines="20"/>
+
+
+        </LinearLayout>
+</LinearLayout>
