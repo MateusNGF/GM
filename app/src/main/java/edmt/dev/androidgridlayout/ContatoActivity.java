@@ -1,57 +1,53 @@
 package edmt.dev.androidgridlayout;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ContatoActivity extends AppCompatActivity {
 
-    GridLayout mainGrid;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_contato);
 
-        mainGrid = (GridLayout) findViewById(R.id.mainGrid);
-
-        //Set Event
-        setSingleEvent(mainGrid);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-    private void setSingleEvent(GridLayout mainGrid) {
-        //Loop all child item of Main Grid
-        for (int i = 0; i < mainGrid.getChildCount(); i++) {
-            //You can see , all child item is CardView , so we just cast object to CardView
-            CardView cardView = (CardView) mainGrid.getChildAt(i);
-            final int finalI = i;
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    switch (finalI){
-                        case 5:
-                            Intent intent = new Intent(MainActivity.this, ContatoActivity.class);
-                            startActivity(intent);
-                            break;
-                        default:
-                            ShowToast(false,null);
-                            break;
-                    }
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-                }
-            });
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_menu_voltar:
+                    ShowToast(false, "OPÇÃO VOLTAR DESABILITADA");
+                    return true;
+                case R.id.navigation_menu_inicio:
+                    Intent intent = new Intent(ContatoActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                    return true;
+                case R.id.navigation_menu_notifications:
+                    ShowToast(false, "OPÇÃO NOTIFICAÇÃO DISABILITADA");
+                    return true;
+            }
+            return false;
         }
-    }
-
+    };
 
     public void ShowToast(boolean type, String msg){
         if (msg == null)

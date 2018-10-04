@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                             ShowToast(true, "BEM VINDO "+NomeUser.toUpperCase());
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
+                            finish();
                         }else{
                             Cn.setError("ERRO");
                             Cs.setError("ERRO");

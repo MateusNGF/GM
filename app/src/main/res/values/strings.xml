@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AndroidGridLayout</string>
+    <string name="app_name">Grimminck</string>
+
+    <string name="title_activity_contato">Contato</string>
+    <string name="title_voltar_menu">Voltar</string>
+    <string name="title_inicio_menu">Inicio</string>
+    <string name="title_notificao_menu">Notificações</string>
 </resources>
